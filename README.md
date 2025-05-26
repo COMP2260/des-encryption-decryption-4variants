@@ -1,6 +1,4 @@
-#TODO
-
-1. Bit Manipulation Utilities
+1. Bit Manipulation Utilities -- DONE
 
 - str_to_bits(a,b) -- done
 - bits_to_str(s) -- done
@@ -9,14 +7,14 @@
 - xor(a,b) -> string -- done
 - permute(list, table) -> string -- done
 
-2. Key Schedule Functions
+2. Key Schedule Functions -- DONE
 
-- apply_pc1
-- split_key
-- shift_left(bits, n ) -> shifted bits
-- apply_pc2
+- apply_pc1 -- done
+- split_key -- done
+- shift_left(bits, n ) -> shifted bits -- done
+- apply_pc2 -- done
 
-3. DES Components
+3. DES Components -- DONE
 
 - Initial Permutation -- done
 - Inverse IP -- done
@@ -40,3 +38,5 @@
 - Des1
 - Des2
 - Des3
+
+6. Encryption/ Decryption
