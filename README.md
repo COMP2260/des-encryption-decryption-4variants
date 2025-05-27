@@ -1,3 +1,7 @@
+TODO
+
+ref: https://chatgpt.com/c/68341ca1-c390-8005-947f-f4dd455311ec
+
 1. Bit Manipulation Utilities -- DONE
 
 - str_to_bits(a,b) -- done
@@ -26,17 +30,32 @@
 
 4. Implement DES Components
 
-- initial_permutation(block)
-- expansion_permutation
-- apply_sboxes()
-- permutation_p
-- inverse_initial_permutation
+- initial_permutation(block) -- done
+- expansion_permutation -- done
+- inverse_expansion
+- apply_sboxes() -- done
+- permutation_p -- done
+- inverse_initial_permutation -- done
 
 5. DES Variants
 
-- Des0
-- Des1
+- Des0 -- done
+- Des1 -- done
 - Des2
-- Des3
+- Des3 -- done
 
 6. Encryption/ Decryption
+
+WORK FLOW
+P: 64-bit plaintext
+P': differs from P by 1 bit
+K: 64-bit Key
+K': differs from K by one bit
+
+STEP 1: Conver from hex/str to binary (done)
+STEP 2: Initital Permutation (done)
+STEP 3: Generate Round Keys
+STEP 4: Perform DES Rounds
+STEP 5: Apply Inverse Initial Permutation
+STEP 6: Decryption
+STEP 7: Avalanche Effect Analysis
