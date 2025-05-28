@@ -29,9 +29,9 @@ def xor(a,b):
     return result
 
 #initital permutation
-def permute(s, table, n):
+def permute(s, table):
     permutation = ""
-    for i in range(0, n):
-        permutation = permutation + s[table[i] -1] #as python is 0-based indexing
+    for i in range(0, len(table)):
+        permutation += s[table[i] -1] #as python is 0-based indexing
     
     return permutation
