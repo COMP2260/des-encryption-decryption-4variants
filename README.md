@@ -1,7 +1,3 @@
-TODO
-
-ref: https://chatgpt.com/c/68341ca1-c390-8005-947f-f4dd455311ec
-
 1. Bit Manipulation Utilities -- DONE
 
 - str_to_bits(a,b) -- done
@@ -27,6 +23,8 @@ ref: https://chatgpt.com/c/68341ca1-c390-8005-947f-f4dd455311ec
 - PC2 -- done
 - S-boxes -- done
 - Permutation P -- done
+- Inverse expansion -- NOT DONE
+- Generate round key -- done
 
 4. Implement DES Components
 
@@ -45,6 +43,7 @@ ref: https://chatgpt.com/c/68341ca1-c390-8005-947f-f4dd455311ec
 - Des3 -- done
 
 6. Encryption/ Decryption
+- Encryption
 
 WORK FLOW
 P: 64-bit plaintext
