@@ -41,7 +41,7 @@ def decrypt(ciphertext, key, version= 'DES0'):
     #reverse the list for decryption
     round_keys = generate_round_keys(key)[::-1]
     
-    #initial permutaiton
+    #initial permutation
     permuted = initial_perm(ciphertext)
 
     #the rest will be implmented same with the encryption function
