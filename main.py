@@ -2,28 +2,13 @@ from DES_IMPLEMENTATION import *
 from Bit_manipulation import *
 from Key_Schedule import *
 
-def encrypt(plaintext, key, mode='DES0'):
-    plaintext = hex2bin(plaintext)
+def main():
+    P, P_1, K, K_1 = 0 #read input file
+    ciphertext = encrypt(P, K)
 
-    # Perform Initial Permutation (IP)
-    plaintext = initial_perm(plaintext)
+    #avalance analysis
+    result = #avalanche_analysis(P, P_1, K, K_1)
 
-    # Split plaintext into left and right halves
-    left = plaintext[0:32]
-    right = plaintext[32:64]
-
-    # Perform Permutated Choice 1 transformation on master key
-    key = apply_pc1(key)
-
-    # Split master key into left and right halves
-    C, D, firstKeySplit = list(), list(), split_key(key)
-    C.append(firstKeySplit[0])
-    D.append(firstKeySplit[1])
-
-    # Perform Feistel rounds
-    for i in range(16):
-        # Expand the right half of the plaintext from 32 to 48-bit
-        right_expanded = expand_perm(right)
 
 
 
