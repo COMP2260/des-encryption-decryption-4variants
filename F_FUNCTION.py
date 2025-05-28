@@ -1,3 +1,6 @@
+from DES_IMPLEMENTATION import *
+from Bit_manipulation import xor
+
 def f_function(r32, round_key, version='DES0'): #default if des0
     if len(r32) != 32:
         raise ValueError("Input should be 32-bit long")
