@@ -16,7 +16,7 @@ def bin2hex(s):
 
 #convert decimal to binary
 def dec2bin(s):
-    return bin(n)[2:]
+    return bin(s)[2:]
     
 #Xor function for 2 strings: a, b
 def xor(a,b):
@@ -29,7 +29,7 @@ def xor(a,b):
     return result
 
 #initital permutation
-def permute(s, table):
+def permute(s, table, n):
     permutation = ""
     for i in range(0, n):
         permutation = permutation + s[table[i] -1] #as python is 0-based indexing
