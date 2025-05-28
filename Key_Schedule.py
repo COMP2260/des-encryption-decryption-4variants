@@ -6,9 +6,6 @@ def shift_left(k, pos):
 
 #apply pc1
 def apply_pc1(s):
-    if len(s) != 64:
-        raise ValueError("Master Key must be 64-bit to perform PC1")
-
     result = ""
     for i in range(len(PC1)):
         result = result + s[PC1[i] -1]
@@ -23,9 +20,6 @@ def split_key(s):
 
 #apply pc2
 def apply_pc2(s):
-    if len(s) != 48:
-        raise ValueError("Round Key must be 48-bit to perform PC2")
-
     result = ""
     for i in range(len(PC2)):
         result = result + s[PC2[i]-1]
