@@ -35,3 +35,4 @@ def permute(s, table):
         permutation += s[table[i] -1] #as python is 0-based indexing
     
     return permutation
+#final
