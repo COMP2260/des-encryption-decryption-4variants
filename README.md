@@ -43,7 +43,8 @@
 - Des3 -- done
 
 6. Encryption/ Decryption
-- Encryption
+- Encryption -- done
+- Decryption -- done
 
 WORK FLOW
 P: 64-bit plaintext
