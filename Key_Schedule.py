@@ -1,3 +1,8 @@
+'''
+File Name: Key_Schedule.py
+'''
+
+
 from DES_Components import PC1, PC2
 
 #shift left:
