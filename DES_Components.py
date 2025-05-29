@@ -1,3 +1,22 @@
+'''
+File name: DES_Components.py
+Description: Initialize important DES Components, including:
+- Initial Permutation Table: IP Table
+- Inverse Inititial Permutation Table: I_IP
+- Expansion Permutation Table: E
+- Permutation Function Table: P
+- PC1 Table
+- PC2 Table
+- Rotation
+- 8 S-boxes
+Author: @Nhu Nam Do Nguyen & @Chi Tai Nguyen
+Student ID: c3444589 & c3444339
+Date: 25 May 2025
+Course: COMP3260 - Assignment 2
+'''
+
+
+
 #Create DES tables
 
 #Initial Permutation: IP
