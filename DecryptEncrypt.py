@@ -111,7 +111,9 @@ def analysis_table(p1, p2, k1, k2, mode='same-key'):
     elif mode == 'different-key':
         output = "P under K and K'\n"
 
-    for version in ['DES0', 'DES1', 'DES2', 'DES3']:
+    # Encrypt plaintexts with the specified keys and versions
+    versions = ['DES0', 'DES1', 'DES2', 'DES3']
+    for version in versions:
         if mode == 'same-key':
             ciphertext_P1, p1rounds = encrypt(p1, k1, version)
             ciphertext_P2, p2rounds = encrypt(p2, k1, version)
@@ -125,9 +127,17 @@ def analysis_table(p1, p2, k1, k2, mode='same-key'):
         allp1rounds.append(p1rounds)
         allp2rounds.append(p2rounds)
 
-    output += "Ciphertext C:\t" + cipher1[0] + f" (H: {bin2hex(cipher1[0])})" + "\n"
-    output += "Ciphertext C':\t" + cipher2[0] + f" (H: {bin2hex(cipher2[0])})" + "\n"
-    output += "Round\t\t\tDES0\tDES1\tDES2\tDES3\n"
+    # Display ciphertexts by DES variants
+    output += "Ciphertext C:\n"
+    for i in range(len(versions)):
+        output += "\t" + versions[i] + ":\t\t" + cipher1[i] + f" (H: {bin2hex(cipher1[i])})" + "\n"
+
+    output += "Ciphertext C':\n"
+    for i in range(len(versions)):
+        output += "\t" + versions[i] + ":\t\t" + cipher2[i] + f" (H: {bin2hex(cipher2[i])})" + "\n"
+
+    # Avalanche effect analysis
+    output += "\nRound\t\t\tDES0\tDES1\tDES2\tDES3\n"
 
     init_diff = xor(p1, p2).count('1') if mode == 'same-key' else 0     # Number of differing bits in p1 and p2
     output += f"\t0\t\t\t{init_diff}\t\t{init_diff}\t\t{init_diff}\t\t{init_diff}\n"
