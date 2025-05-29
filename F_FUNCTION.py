@@ -1,3 +1,13 @@
+'''
+File Name: F_FUNCTION.py
+Description: F function is performed in this file with the functions from DES_IMPLEMENTATION and Bit_manipulation file depending on the mode. 
+Author: @Nhu Nam Do Nguyen & @Chi Tai Nguyen
+Student ID: c3444589 & c3444339
+Date: 30/5/2025
+Course: COMP3260 - Assignment 2
+'''
+
+
 from DES_IMPLEMENTATION import *
 from Bit_manipulation import xor
 
