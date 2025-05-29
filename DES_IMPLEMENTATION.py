@@ -1,5 +1,5 @@
 from DES_Components import *
-from Bit_manipulation import dec2bin, xor
+from Bit_manipulation import dec2bin
 
 #initial permutation
 def initial_perm(s):

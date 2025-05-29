@@ -10,13 +10,16 @@ def bit_to_str(int_list):
 def hex2bin(s):
 	return bin(int(s, 16))[2:]
 
-#convert binary to interger -> convert to hexademical value -> remove 0x 
+#convert binary to interger -> convert to hexadecimal value -> remove 0x 
 def bin2hex(s):
 	return hex(int(s,2))[2:].upper()
 
 #convert decimal to binary
 def dec2bin(s):
-    return bin(s)[2:]
+    binary = bin(s)[2:]
+    while len(binary) < 4:
+        binary = "0" + binary
+    return binary
     
 #Xor function for 2 strings: a, b
 def xor(a,b):
