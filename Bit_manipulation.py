@@ -1,4 +1,3 @@
-#
 '''
 File name: Bit_manipulation.py
 Description: This file's functions are for the bit string manipulation, including converting string into list of bits, converting bit list back to string,
