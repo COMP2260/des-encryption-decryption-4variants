@@ -1,9 +1,28 @@
+'''
+File name: DecryptEncrypt.py
+Description: Implement the encryption and decryption by importing and aggregating functions from other files: DES_IMPLEMENTATION, F_FUNCTION, Key_Schedule and Bit_manipulation
+The encrypt function takes the plaintext, key and the DES version as input and return a ciphertext as output. 
+The decrypt function takes the ciphertext, key and the DES version as input and return a plaintext as output.
+The generate_round_keys function takes a bit string as input and return a list of keys for each round (16 rounds)
+The analysis_table function generates comparative analysis of the DES encryption process depending on different mode parameter. A table is generated to display the ciphertexts
+and analyze the avalance effect across multiple DES variants
+
+
+Author: @Nhu Nam Do Nguyen @Chi Tai Nguyen
+Student ID: c3444589 & c3444339
+Date: 30 May 2025
+Course: COMP3260 - Assignment 2
+
+'''
+
+
 from DES_IMPLEMENTATION import *
 from F_FUNCTION import f_function
 from Key_Schedule import *
 from Bit_manipulation import xor, bin2hex
 
 def encrypt(plaintext, key, version='DES0'):
+    #check the length of the plaintext
     if len(plaintext) != 64:
         raise ValueError("Plaintext must be 64 bits")
 
