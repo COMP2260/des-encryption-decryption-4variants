@@ -1,21 +1,18 @@
 '''
-File name: Bit_manipulation.py
-Description: This file's functions are for the bit string manipulation, including converting string into list of bits, converting bit list back to string,
-converting hexademical to binary, converting binary to hexadecimal value, XOR operation for 2 strings.
+File Name: Bit_manipulation.py
+
+Description:
+    This file's functions are for the bit string manipulation, including converting string into list of bits, converting bit list back to string,
+    converting hexademical to binary, converting binary to hexadecimal value, XOR operation for 2 strings.
+
 Author: @Nhu Nam Do Nguyen & @Chi Tai Nguyen
+
 Student ID: c3444589 & c3444339
+
 Date: 25 May 2025
+
 Course: COMP3260 - Assignment 2
-
 '''
-
-
-
-
-
-
-
-
 #convert string input into list
 def str_to_bits(s):
     return list(s)

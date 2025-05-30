@@ -1,13 +1,18 @@
 '''
 File Name: Key_Schedule.py
+
 Description: Performs key functions, including: 
-- shift_left: shift the position of the key by number of bit k
-- apply_pc1: apply the pc1 table into the bit string
-- apply_pc2: apply the pc2 table into the bit string
-- split_key: split 56-bit key into two 28-bit keys
+    * shift_left: shift the position of the key by number of bit k
+    * apply_pc1: apply the pc1 table into the bit string
+    * apply_pc2: apply the pc2 table into the bit string
+    * split_key: split 56-bit key into two 28-bit keys
+
 Author: @Nhu Nam Do Nguyen @Chi Tai Nguyen
+
 Student ID: c3444589 & c3444339
+
 Date: 30 May 2025
+
 Course: COMP3260 - Assignment 2
 '''
 

@@ -1,20 +1,25 @@
 '''
 File Name: DES_IMPLEMENTATION.py
 
-Description: The functions in this file will be implemented based on the initialized table in the DES_Components file with the decimal to binary converting function from 
-Bit_manipulation file. The initial permutation function will use the IP table, the inverse_perm function utilizes the I_IP table, the expand_perm (expansion permutation) uses the 
-E table, the inverse_expand implement the inverse expansion which is included in the DES2, the perm_P is for the permutation P implementation and S-box apply function which 
-applies the S-boxes into the bit string.
+Description:
+    The functions in this file will be implemented based on the initialized tables
+    in DES_Components with the decimal to binary (dec2bin) conversion function from 
+    Bit_manipulation for the S-boxes. The functions include:
+    * initial_perm(s): apply IP table transformation to input s, which is a 64-bit string.
+    * inverse_perm(s): apply the inverse IP table transformation to input s, which is a 64-bit string.
+    * expand_perm(s): apply the E table transformation to input s, which is a 32-bit string.
+    * inverse_expand(s): apply the inverse E table transformation to input s, which is a 48-bit string.
+    * perm_P(s): apply the P table transformation to input s, which is a 32-bit string.
+    * apply_sbox(s): applies the S-boxes to the input s, which is a 48-bit string.
+
 Author: @Nhu Nam Do Nguyen @Chi Tai Nguyen
+
 Student ID: c3444589 & c3444339
+
 Date: 30 May 2025
 
-
+Course: COMP3260 - Assignment 2
 '''
-
-
-
-
 
 from DES_Components import *
 from Bit_manipulation import dec2bin

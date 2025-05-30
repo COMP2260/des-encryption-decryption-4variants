@@ -14,9 +14,6 @@ Student ID: c3444589 & c3444339
 Date: 25 May 2025
 Course: COMP3260 - Assignment 2
 '''
-
-
-
 #Create DES tables
 
 #Initial Permutation: IP
