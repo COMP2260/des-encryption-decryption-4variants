@@ -1,12 +1,15 @@
 """
 main.py - Main script for DES Encryption/Decryption Tool
-Author: Chi Tai Nguyen (3444339), Nhu Nam Do Nguyen (3444589)
+Author: @Chi Tai Nguyen, @Nhu Nam Do Nguyen 
+Student ID: c3444339 & c3444589
 
 This program implements a DES encryption and decryption tool that allows users to perform
 encryption and decryption operations using different DES algorithms.
 It supports both encryption and decryption modes, allowing users to analyze the avalanche effect in DES encryption.
 
 Refer to the README.txt for usage instructions and examples.
+Date: 31 May 2025
+Couse: COMP3260 - Assignment 2
 """
 import time
 from DecryptEncrypt import *
