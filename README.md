@@ -57,29 +57,35 @@ Once the program successfully starts, follow these steps:
 
 2.  Another input prompt will allow the user to choose a .txt file as input.
     Simply type the name of the file (without the .txt suffix).
-        a. If mode is encryption, ensure the file has exactly 4 lines, with the first 2 being 64-bit each, and the last 2 58-bit each. There will also be checks to make sure the pairs have a 1 bit difference.
+    
+        a. If mode is encryption, ensure the file has exactly 4 lines, with the first 2 being 64-bit each, and the last 2 58-bit each.
+            There will also be checks to make sure the pairs have a 1 bit difference.
 
         b. If mode is decryption, ensure the file has exactly 2 lines, first one being 64-bit and the other being 58-bit.
 
-3.  Upon valid file input, the program will produce a .txt file
+4.  Upon valid file input, the program will produce a .txt file
     outlining the results of the encryption/decryption
     in the same working directory as the input file.
 
-    Format: [input_file]_output.txt             (for encryption)
-            [input_file]_decryption_output.txt  (for decryption)
+          Format: [input_file]_output.txt             (for encryption)
+                  [input_file]_decryption_output.txt  (for decryption)
 
-Notes:
-    -   This program is designed to only take .txt files as input.
-        If you have data in another format, convert the file into txt before using.
+NOTES
+-------------------------
+- This program is designed to only take .txt files as input.
+  If you have data in another format, convert the file into txt before using.
 
-    -   The program will check that the input file meets the following criteria:
+- The program will check that the input file meets the following criteria:
+
         For encryption:
+  
             * Input has exactly 4 lines
             * Each line has exactly 64 characters
             * Every line must be a binary string (though this is not enforced, the program will fail to run otherwise)
             * First 2 and last 2 lines as pairs must differ by exactly 1 bit (a manual bit flip can be done)
         
         For decrpytion:
+  
             * Input has exactly 2 lines
             * Each line has exactly 64 characters
             * Both line must be binary strings (same case with encryption)
