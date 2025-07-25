@@ -12,15 +12,18 @@ Date Published: 30/05/2024
 
 DESCRIPTION
 -------------------------------------------
+
 This is a Python program designed to handle DES encryption and decryption as a 2-in-1 solution.
 Alongside the standard 64-bit DES algorithm, variants outlined in the Assignment Specifications
-are also included and implmented in the program.
+are also included and implemented in the program.
+
 The program will run based on 2 input prompts: mode selection, and input selection.
 These promps will allow the user to choose between encryption and decrpytion, and
 selecting an input file to be processed by the program, respectively.
+
 Encryption and decryption will each produce a different output format,
 coupled with results from all DES variants (DES0, DES1, DES2, DES3).
--------------------------------------------------------------------------------------------------------------------------------------
+
 STRUCTURE
 -------------------------------------------------------------------------------------------------------------------------------------
 This program consists of the following files:
