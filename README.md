@@ -1,16 +1,17 @@
 The University of Newcastle, Australia
-COMP3260 (Data Security) - Assignment 2
--------------------------------------------
-4-MODE DES ENCRYPTION & DECRYPTION PROGRAM
 
+COMP3260 (Data Security) - Assignment 2
+
+4-MODE DES ENCRYPTION & DECRYPTION PROGRAM
+-------------------------------------------
 Authors:
    - Nhu Nam Do Nguyen - 3444589
    - Chi Tai Nguyen    - 3444339
 
-Date: 30/05/2024
--------------------------------------------
-DESCRIPTION
+Date Published: 30/05/2024
 
+DESCRIPTION
+-------------------------------------------
 This is a Python program designed to handle DES encryption and decryption as a 2-in-1 solution.
 Alongside the standard 64-bit DES algorithm, variants outlined in the Assignment Specifications
 are also included and implmented in the program.
@@ -21,7 +22,7 @@ Encryption and decryption will each produce a different output format,
 coupled with results from all DES variants (DES0, DES1, DES2, DES3).
 -------------------------------------------------------------------------------------------------------------------------------------
 STRUCTURE
-
+-------------------------------------------------------------------------------------------------------------------------------------
 This program consists of the following files:
 
                 * PYTHON FILES *
@@ -45,7 +46,7 @@ This program consists of the following files:
 
 -------------------------------------------------------------------------------------------------------------------------------------
 PROGRAM INSTRUCTIONS
-
+-------------------------------------------------------------------------------------------------------------------------------------
 We encourage you to use a program that natively supports Python 3.x (e.g. PyCharm, Visual Studio Code).
 In the IDE, make sure to select the containing folder as the working directory of the program.
 Then simply run *main.py* in a dedicated terminal, as the script will prompt the user for input.
@@ -82,5 +83,5 @@ Notes:
             * Input has exactly 2 lines
             * Each line has exactly 64 characters
             * Both line must be binary strings (same case with encryption)
-            * Boh lines must differ by exactly 1 bit 
+            * Both lines must differ by exactly 1 bit 
     
