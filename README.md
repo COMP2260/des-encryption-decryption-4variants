@@ -4,8 +4,8 @@ COMP3260 (Data Security) - Assignment 2
 4-MODE DES ENCRYPTION & DECRYPTION PROGRAM
 
 Authors:
-    * Nhu Nam Do Nguyen - 3444589
-    * Chi Tai Nguyen    - 3444339
+   - Nhu Nam Do Nguyen - 3444589
+   - Chi Tai Nguyen    - 3444339
 
 Date: 30/05/2024
 -------------------------------------------
