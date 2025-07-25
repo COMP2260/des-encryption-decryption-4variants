@@ -1,75 +1,86 @@
-1. Bit Manipulation Utilities -- DONE
+The University of Newcastle, Australia
+COMP3260 (Data Security) - Assignment 2
+-------------------------------------------
+4-MODE DES ENCRYPTION & DECRYPTION PROGRAM
 
-- str_to_bits(a,b) -- done
-- bits_to_str(s) -- done
-- hex_to_bit -- done
-- bits_to_hex -- done
-- xor(a,b) -> string -- done
-- permute(list, table) -> string -- done
+Authors:
+    * Nhu Nam Do Nguyen - 3444589
+    * Chi Tai Nguyen    - 3444339
 
-2. Key Schedule Functions -- DONE
+Date: 30/05/2024
+-------------------------------------------
+DESCRIPTION
 
-- apply_pc1 -- done
-- split_key -- done
-- shift_left(bits, n ) -> shifted bits -- done
-- apply_pc2 -- done
+This is a Python program designed to handle DES encryption and decryption as a 2-in-1 solution.
+Alongside the standard 64-bit DES algorithm, variants outlined in the Assignment Specifications
+are also included and implmented in the program.
+The program will run based on 2 input prompts: mode selection, and input selection.
+These promps will allow the user to choose between encryption and decrpytion, and
+selecting an input file to be processed by the program, respectively.
+Encryption and decryption will each produce a different output format,
+coupled with results from all DES variants (DES0, DES1, DES2, DES3).
+-------------------------------------------------------------------------------------------------------------------------------------
+STRUCTURE
 
-3. DES Components -- DONE
+This program consists of the following files:
 
-- Initial Permutation -- done
-- Inverse IP -- done
-- Expansion E (32-48bit) -- done
-- PC1 -- done
-- PC2 -- done
-- S-boxes -- done
-- Permutation P -- done
-- Generate round key -- done
+                * PYTHON FILES *
+    - main.py                   - the main file of the program
+    - DecryptEncrypt.py         - top-level functions for DES encryption/decryption
+    - DES_IMPLEMENTATION.py     - core functions used during the DES transformation
+    - F_FUNCTION.py             - a function that directs the encryption algorithm based on different variants of DES
+    - Key_Schedule.py           - core functions and utilities to generate round keys for DES encryption/decryption
+    - DES_IMPLEMENTATION.py     - core functions utilised during the f-function operation
+    - Bit_manipulation.py       - helpful utilities to handle bit manipulation, decimal/hexadecimal/binary encoding and decoding
+    - DES_Components.py         - a collection of predefined permutation tables to be used during the encryption/decryption process
+    
+                * TXT FILES *
+    - README.TXT                            - this file, outlining the program's design, structure and usage
+    - sample.txt                            - the default input file for encryption mode
+    - sample2.txt                           - another sample input file for encryption
+    - sample_output.txt                     - an Avalanche Analysis report for sample.txt
+    - sample2_output.txt                    - Avalance Analysis report for sample2.txt
+    - decrypt_sample.txt                    - the default input file for decryption mode
+    - decrypt_sample_decryption_output.txt  - decryption results for decrypt_sample.txt
 
-4. Implement DES Components -- DONE
+-------------------------------------------------------------------------------------------------------------------------------------
+PROGRAM INSTRUCTIONS
 
-- initial_permutation(block) -- done
-- expansion_permutation -- done
-- inverse_expansion -- done
-- apply_sboxes() -- done
-- permutation_p -- done
-- inverse_initial_permutation -- done
+We encourage you to use a program that natively supports Python 3.x (e.g. PyCharm, Visual Studio Code).
+In the IDE, make sure to select the containing folder as the working directory of the program.
+Then simply run *main.py* in a dedicated terminal, as the script will prompt the user for input.
 
-5. DES Variants
+Once the program successfully starts, follow these steps:
 
-- Des0 -- done
-- Des1 -- done
-- Des2
-- Des3 -- done
+1.  Insert 'e' or 'd' into the input prompt to choose Encryption or Decryption mode.
 
-6. Encryption/ Decryption
-- Encryption -- done
-- Decryption -- done
+2.  Another input prompt will allow the user to choose a .txt file as input.
+    Simply type the name of the file (without the .txt suffix).
+        a. If mode is encryption, ensure the file has exactly 4 lines, with the first 2 being 64-bit each, and the last 2 58-bit each. There will also be checks to make sure the pairs have a 1 bit difference.
 
-WORK FLOW
-P: 64-bit plaintext
-P': differs from P by 1 bit
-K: 64-bit Key
-K': differs from K by one bit
+        b. If mode is decryption, ensure the file has exactly 2 lines, first one being 64-bit and the other being 58-bit.
 
-STEP 1: Conver from hex/str to binary (done)
-STEP 2: Initital Permutation (done)
-STEP 3: Generate Round Keys
-STEP 4: Perform DES Rounds
-STEP 5: Apply Inverse Initial Permutation
-STEP 6: Decryption
-STEP 7: Avalanche Effect Analysis
+3.  Upon valid file input, the program will produce a .txt file
+    outlining the results of the encryption/decryption
+    in the same working directory as the input file.
 
-DecryptEncrypt.py:
-- Consider storing the plaintext after every round, so we have data for the Avalanche Analysis.
-- The numbers in each row can be calculated with sum(a != b for a, b in zip(p1[i], p2[i])), where p1[i] is P, and p2[i] is P', each after round i. 
+    Format: [input_file]_output.txt             (for encryption)
+            [input_file]_decryption_output.txt  (for decryption)
 
-Program Instructions:
-1. Insert 'e' or 'd' into the input prompt to choose Encryption or Decryption mode (each mode takes a different file input)
+Notes:
+    -   This program is designed to only take .txt files as input.
+        If you have data in another format, convert the file into txt before using.
 
-2. Another input prompt will allow the user to choose a .txt file as input. Simply type the name of the file (without the .txt suffix).
-    a. If mode is encryption, ensure the file has exactly 4 lines, with the first 2 being 64-bit each, and the last 2 58-bit each. There will also be checks to make sure the pairs have a 1 bit difference.
-
-    b. If mode is decryption, ensure the file has exactly 2 lines, first one being 64-bit and the other being 58-bit.
-
-3. For decryption, input a desired DES variant ('DES0', 'DES1', 'DES2', 'DES3', or leave blank for DES0, the default variant). This will be contained in a while loop, allowing the user to try other variants. Program stops upon receiving input '0'.
-
+    -   The program will check that the input file meets the following criteria:
+        For encryption:
+            * Input has exactly 4 lines
+            * Each line has exactly 64 characters
+            * Every line must be a binary string (though this is not enforced, the program will fail to run otherwise)
+            * First 2 and last 2 lines as pairs must differ by exactly 1 bit (a manual bit flip can be done)
+        
+        For decrpytion:
+            * Input has exactly 2 lines
+            * Each line has exactly 64 characters
+            * Both line must be binary strings (same case with encryption)
+            * Boh lines must differ by exactly 1 bit 
+    
